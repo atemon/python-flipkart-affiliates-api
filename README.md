@@ -1,4 +1,3 @@
-
 Python wrapper for Flipkart affiliates API
 ==========================================
 
