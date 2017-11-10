@@ -83,9 +83,11 @@ class FlipkartApi(object):
         """Get all category names."""
         if self.category_dict is None:
             self.get_products_category_dict()
-
-        self.category_names = self.category_dict.keys()
-        return self.category_names
+        if type(self.category_dict) is dict:
+            self.category_names = self.category_dict.keys()
+            return self.category_names
+        else:
+            return []
 
     def get_category_url(self, category_name, list_type="get", in_stock=True):
         """
